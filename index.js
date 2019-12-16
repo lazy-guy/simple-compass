@@ -8,7 +8,7 @@ function orientationhandler(event) {
 }
 
 function nodeviceorientation() {
-    alert("Your browser does not support Device Orientation Absolute! This compass will not work!")
+    alert("Your browser does not support Device Orientation Absolute! This compass will not work!");
 }
 if ("ondeviceorientationabsolute" in window) {
     window.addEventListener("deviceorientationabsolute", orientationhandler);
@@ -24,8 +24,6 @@ if ("ondeviceorientationabsolute" in window) {
                 }
                 document.querySelector("#needle").innerHTML = `&nbsp;${degrees}&deg;`;
                 document.querySelector("#compass").style.transform = `rotate(${360-degrees}deg)`;
-            } else {
-                orientationhandler(evt);
             }
         })
     } else {

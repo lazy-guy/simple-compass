@@ -11,10 +11,10 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "name": "Dark Compass",
+  "name": "Simple Compass",
   "lang": "en-US",
   "short_name": "Compass",
-  "start_url": "/dark-compass/index.html",
+  "start_url": "/simple-compass/index.html",
   "theme_color": "#111111",
-  "scope": "/dark-compass/"
+  "scope": "/simple-compass/"
 }
