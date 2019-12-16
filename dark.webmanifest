@@ -1,0 +1,20 @@
+{
+  "background_color": "black",
+  "description": "Dark-themed compass PWA",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },{
+    "src": "icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "name": "Dark Compass",
+  "lang": "en-US",
+  "short_name": "Compass",
+  "start_url": "/dark-compass/index.html",
+  "theme_color": "#111111",
+  "scope": "/dark-compass/"
+}

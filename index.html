@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#222">
+    <meta name="description"
+        content="A simple compass PWA which works using  _deviceorientationabsolute_  or  _deviceorientation_, depending on the browser.">
+    <title>Compass</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="manifest" href="./dark.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+    <div id="compass">
+    </div>
+    <div id="needle">NA</div>
+    <script src="./index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('sw.js');
+        }
+    </script>
+</body>
+
+</html>
