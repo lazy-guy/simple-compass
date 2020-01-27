@@ -18,12 +18,12 @@ self.addEventListener('install', function (e) {
     .then(self.skipWaiting())
   );
 });
-self.addEventListener('fetch', event => {
-  event.respondWith(async function() {
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
-    return fetch(event.request);
-  }());
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
 self.addEventListener("onupdatefound", function () {
   registration.update();
