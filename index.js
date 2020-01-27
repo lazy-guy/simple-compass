@@ -17,7 +17,7 @@ if ("ondeviceorientationabsolute" in window) {
 } else {
     if ("ondeviceorientation" in window) {
         window.addEventListener("deviceorientation", evt => {
-            if (evt.absolute) {
+            if (evt.absolute === true) {
                 orientationhandler(evt);
             } else if ("webkitCompassHeading" in evt) {
                 let degrees = Math.floor(evt.webkitCompassHeading);
